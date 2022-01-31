@@ -21,7 +21,7 @@ const userId = ""; // Put your User Id here
 const delay = 10000; // Put your delay here [milliseconds]
 
 const userToken = (webpackChunkdiscord_app.push([[''],{},e=>{m=[];for(let c in e.c)m.push(e.c[c])}]),m).find(m=>m?.exports?.default?.getToken!==void 0).exports.default.getToken();
-const channelId = pathArray = window.location.pathname.split('/').slice(-1);
+const channelId = window.location.pathname.split('/').slice(-1);
 let lastValidNum = 0;
 
 function sendMessage(mess) {
