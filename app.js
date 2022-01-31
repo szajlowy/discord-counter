@@ -58,9 +58,9 @@ function count () {
     let lastMess, lastNum;
     lastMess = getLastMess();
     lastNum = parseInt(lastMess);
-    if (lastNum === 'NaN') {
+    if (isNaN(lastNum)) {
         console.log("Last number isn't valid");
-        lastNum = lastValidNum;
+        lastNum = ++lastValidNum;
     } else {
         lastValidNum = lastNum;
     }
