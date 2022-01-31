@@ -40,9 +40,10 @@ function sendMessage(mess) {
         "mode": "cors",
         "credentials": "include"
     })
-    .then(res => res.json)
+    .then(res => res.json())
     .then(data => {
         console.log('Sent!', data);
+        setTimeout(() => count(), delay);
     })
     .catch(e => { throw new Error("Couldn't send your message! Check your delay and User Id!!!", e) });
 }
@@ -62,4 +63,4 @@ function count () {
     sendMessage(++lastNum);
 }
 
-setInterval(() => count(), delay);
+count();
