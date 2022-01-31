@@ -22,6 +22,7 @@ const delay = 10000; // Put your delay here [milliseconds]
 
 const userToken = (webpackChunkdiscord_app.push([[''],{},e=>{m=[];for(let c in e.c)m.push(e.c[c])}]),m).find(m=>m?.exports?.default?.getToken!==void 0).exports.default.getToken();
 const channelId = pathArray = window.location.pathname.split('/').slice(-1);
+let lastValidNum = 0;
 
 function sendMessage(mess) {
     fetch(`https://discord.com/api/v9/channels/${channelId}/messages`, {
@@ -57,8 +58,11 @@ function count () {
     let lastMess, lastNum;
     lastMess = getLastMess();
     lastNum = parseInt(lastMess);
-    if (lastNum === NaN) {
-        throw new Error("Last message isn't a valid number!");
+    if (lastNum === 'NaN') {
+        console.log("Last number isn't valid");
+        lastNum = lastValidNum;
+    } else {
+        lastValidNum = lastNum;
     }
     sendMessage(++lastNum);
 }
