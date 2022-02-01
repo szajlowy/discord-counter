@@ -15,8 +15,6 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-
-
 const userId = ""; // Put your User Id here
 const delay = 10000; // Put your delay here [milliseconds]
 
@@ -66,5 +64,21 @@ function count () {
     }
     sendMessage(++lastNum);
 }
+
+console.log(` ######
+#     # #  ####   ####   ####  #####  #####
+#     # # #      #    # #    # #    # #    #
+#     # #  ####  #      #    # #    # #    #
+#     # #      # #      #    # #####  #    #
+#     # # #    # #    # #    # #   #  #    #
+######  #  ####   ####   ####  #    # #####
+                                                 
+ #####
+#     #  ####  #    # #    # ##### ###### #####
+#       #    # #    # ##   #   #   #      #    #
+#       #    # #    # # #  #   #   #####  #    #
+#       #    # #    # #  # #   #   #      #####
+#     # #    # #    # #   ##   #   #      #   #
+ #####   ####   ####  #    #   #   ###### #    #`, '\n\n\n');
 
 count();
