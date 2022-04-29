@@ -42,7 +42,7 @@ function sendMessage(mess) {
     .then(res => res.json())
     .then(data => {
         console.log('Sent!', data);
-        setTimeout(() => count(), delay);
+        setTimeout(count, delay);
     })
     .catch(e => { throw new Error("Couldn't send your message! Check your delay and User Id!!!", e) });
 }
