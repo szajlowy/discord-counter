@@ -15,7 +15,6 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-const userId = ""; // Put your User Id here
 const delay = 10000; // Put your delay here [milliseconds]
 
 const userToken = (webpackChunkdiscord_app.push([[''],{},e=>{m=[];for(let c in e.c)m.push(e.c[c])}]),m).find(m=>m?.exports?.default?.getToken!==void 0).exports.default.getToken();
@@ -32,7 +31,7 @@ function sendMessage(mess) {
             "x-debug-options": "bugReporterEnabled",
             "x-discord-locale": "en",
         },
-        "referrer": `https://discord.com/channels/${userId}/${channelId}`,
+        "referrer": `https://discord.com/channels//${channelId}`,
         "referrerPolicy": "strict-origin-when-cross-origin",
         "body": `{\"content\":\"${mess}\",\"tts\":false}`,
         "method": "POST",
